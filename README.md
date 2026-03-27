@@ -1,2 +1,2 @@
 # noza-s-skills
-Automating myself out of relevance :)
+A collection of skills I built instead of doing the thing the skills were supposed to help me do.
