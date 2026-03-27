@@ -1,13 +1,13 @@
 ## Project Overview
 
-This project is a frontend-only demo web app that simulates an AI chatbot with agentic plugin capabilities. Users can explore four plugin flows — Excel Q&A, Form Filling, Slide Generation, and Meeting Transcription — through a clickable, guided interface.
+This project is a frontend-only demo web app that simulates an AI chatbot with agentic plugin capabilities. Users can explore various plugin flows through a clickable, guided interface.
 
-Primary users are stakeholders, investors, and product teams who need to experience the product vision before backend development begins.
+Primary users are stakeholders and decision-makers who need to experience the product vision before full development begins.
 
 The product optimizes for:
 - realistic interaction feel with mock data
 - visible chain-of-thought reasoning and progress states
-- clean, minimal UI inspired by ChatGPT/Claude
+- clean, minimal UI inspired by modern AI chat interfaces
 - modular plugin architecture that maps to real future integrations
 
 Avoid functional backend logic. Prefer scripted flows with polished transitions over working AI.
@@ -75,16 +75,37 @@ Each flow is defined as a script in `src/data/` containing:
 - Add comments only when intent is non-obvious
 - Do not leave dead code or commented-out blocks
 
-## UI and Design System Rules
+## Design Principles
 
-- Use shadcn/ui-inspired primitives as the default foundation
-- Prefer spacious layouts and strong visual hierarchy
-- Use restrained color — rely on typography, spacing, and contrast
-- Prefer 8px spacing rhythm
-- Buttons should have clear primary/secondary hierarchy
-- Every interactive element must have visible hover, focus, and disabled states
-- Chat bubbles should clearly distinguish user vs bot messages
-- Plugin result cards should feel embedded in the conversation, not overlaid
+### Visual Design
+- Use minimal borders and subtle shadows
+
+### Typography
+- text-sm for body content
+- text-xs for labels and metadata
+- text-3xl for major headings
+- Font weight: 400 (normal), 600 (semibold), 700 (bold)
+
+ ### Color System
+  - **Always use CSS custom properties (variables) for colors** - never hardcode color values
+  - All colors are defined in `src/index.css` as `--color-*` variables
+  - Reference colors using `style={{ color: 'var(--color-primary)' }}` or similar
+  - Never use hardcoded hex codes, rgb(), or Tailwind color classes (like `text-gray-500`, `bg-blue-600`)
+  - Available color variables:
+    - Primary colors (main brand/interaction colors)
+      - `--color-primary`
+      - `--color-primary-hover`
+      - `--color-primary-text`
+    - Secondary colors (backgrounds and surfaces)
+      - `--color-secondary`
+      - `--color-secondary-hover`
+    - Tertiary colors (text and subtle elements)
+      - `--color-tertiary`
+      - `--color-tertiary-muted`
+    - Utility colors
+      - `--color-border`
+      - `--color-success`
+      - `--color-error`
 
 ## File Placement Rules
 
