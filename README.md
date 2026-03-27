@@ -1,2 +1,2 @@
 # noza-s-skills
-A collection of skills I built instead of doing the thing the skills were supposed to help me do.
+My boss thinks I'm working. I'm actually writing a skill to make Claude work.
